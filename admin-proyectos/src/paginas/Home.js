@@ -26,16 +26,15 @@ const Home = () => {
                             <div className="col-lg-3 col-6">
                                 <div className="small-box bg-info">
                                     <div className="inner">
-                                        <h3>Proyectos</h3>
+                                        <h3>Citas</h3>
                                         <p>&nbsp;</p>
                                     </div>
                                     <div className="icon">
                                         <i className="fa fa-clipboard-check" />
                                     </div>
-                                    <Link to={"/proyectos-admin"} className="small-box-footer">Ver Proyectos <i className="fas fa-arrow-circle-right" /></Link>
+                                    <Link to={"/proyectos-admin"} className="small-box-footer">Ver Citas <i className="fas fa-arrow-circle-right" /></Link>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </section>

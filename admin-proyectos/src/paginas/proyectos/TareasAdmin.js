@@ -102,8 +102,8 @@ const TareasAdmin = () => {
                                 <thead>
                                     <tr>
                                         <th style={{ width: '10%' }}>Id</th>
-                                        <th style={{ width: '80%' }}>Nombre</th>
-                                        <th style={{ width: '10%' }}>Opciones</th>
+                                        <th style={{ width: '70%' }}>Nombre</th>
+                                        <th style={{ width: '20%' }}>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

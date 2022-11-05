@@ -93,8 +93,8 @@ const ProyectosAdmin = () => {
                                 <thead>
                                     <tr>
                                         <th style={{ width: '10%' }}>Id</th>
-                                        <th style={{ width: '75%' }}>Nombre</th>
-                                        <th style={{ width: '15%' }}>Opciones</th>
+                                        <th style={{ width: '70%' }}>Nombre</th>
+                                        <th style={{ width: '20%' }}>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

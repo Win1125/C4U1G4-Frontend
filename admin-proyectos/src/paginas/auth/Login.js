@@ -92,6 +92,7 @@ const Login = () => {
                                     placeholder="Email"
                                     value={email}
                                     onChange={onChange}
+                                    autoComplete="off"
                                     required
                                 />
                                 <div className="input-group-append">

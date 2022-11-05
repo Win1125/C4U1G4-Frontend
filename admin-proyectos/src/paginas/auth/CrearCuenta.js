@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import APIInvoke from '../../utils/APIInvoke';
 import swal from 'sweetalert';
 
@@ -137,6 +138,8 @@ const CrearCuenta = () => {
                                     placeholder="Nombre"
                                     value={nombre}
                                     onChange={onChange}
+                                    autoComplete="off"
+                                    pattern="[a-zA-Z]{1,35}"
                                     required
                                 />
                                 <div className="input-group-append">
@@ -153,6 +156,8 @@ const CrearCuenta = () => {
                                     placeholder="Email"
                                     value={email}
                                     onChange={onChange}
+                                    autoComplete="off"
+                                    pattern="[a-zA-Z0-9$@.-]{6,100}"
                                     required
                                 />
                                 <div className="input-group-append">
@@ -169,6 +174,7 @@ const CrearCuenta = () => {
                                     placeholder="Contraseña"
                                     value={password}
                                     onChange={onChange}
+                                    pattern="[a-zA-Z0-9$@.-]{6,100}"
                                     required
                                 />
                                 <div className="input-group-append">
@@ -186,6 +192,7 @@ const CrearCuenta = () => {
                                     placeholder="Confirmar Contraseña"
                                     value={confirmar}
                                     onChange={onChange}
+                                    pattern="[a-zA-Z0-9$@.-]{6,100}"
                                     required
                                 />
                                 <div className="input-group-append">
@@ -196,6 +203,7 @@ const CrearCuenta = () => {
                             </div>
                             <div className="social-auth-links text-center mt-2 mb-3">
                                 <button type="submit" className="btn btn-block btn-primary">Crear Cuenta</button>
+                                <Link to={"/"} className="btn btn-block btn-danger">Iniciar Sesion</Link>
                             </div>
                         </form>
                     </div>

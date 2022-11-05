@@ -17,7 +17,7 @@ const Navbar = () => {
                     <Link className="nav-link" data-widget="pushmenu" to={"#"} role="button"><i className="fas fa-bars" /></Link>
                 </li>
                 <li className="nav-item d-none d-sm-inline-block">
-                    <strong onClick={cerrarSesion} className="nav-link" style={{ cursor: "pointer" }}>Salir</strong>
+                    <strong onClick={cerrarSesion} className="nav-link" style={{ cursor: "pointer" }}>Cerrar Sesion</strong>
                 </li>
             </ul>
             <ul className="navbar-nav ml-auto">
