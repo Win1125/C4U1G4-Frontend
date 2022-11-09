@@ -45,7 +45,7 @@ const ProyectosEditar = () => {
         const idProyectoEditado = response.proyecto._id;
 
         if (idProyectoEditado !== idProyecto) {
-            const mensaje = "El proyecto no fue editado correctamente.";
+            const mensaje = "La Cita no fue editada correctamente.";
             swal({
                 title: 'Error',
                 text: mensaje,
@@ -61,7 +61,7 @@ const ProyectosEditar = () => {
                 }
             });
         } else {
-            const mensaje = "El proyecto fue editado correctamente.";
+            const mensaje = "La Cita fue editada correctamente.";
             navigate("/proyectos-admin");
             swal({
                 title: 'Información',
@@ -93,8 +93,8 @@ const ProyectosEditar = () => {
             <div className="content-wrapper">
 
                 <ContentHeader
-                    Titulo={"Creación de Proyectos"}
-                    breadCrumb1={"Listado de Proyectos"}
+                    Titulo={"Creación de Citas"}
+                    breadCrumb1={"Listado de Citas"}
                     breadCrumb2={"Creación"}
                     ruta1={"/proyectos-admin"}
                 />
@@ -121,7 +121,7 @@ const ProyectosEditar = () => {
                                             className="form-control"
                                             id="nombre"
                                             name="nombre"
-                                            placeholder="Nombre Proyecto"
+                                            placeholder="Nombre Cita"
                                             value={nombre}
                                             onChange={onChange}
                                             required

@@ -19,7 +19,7 @@ const Menu = () => {
                     <Link to={"/proyectos-admin"} className="nav-link">
                         <i className="nav-icon fas fa-clipboard-check" />
                         <p>
-                            Proyectos
+                            Citas
                         </p>
                     </Link>
                 </li>

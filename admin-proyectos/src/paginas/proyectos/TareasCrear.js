@@ -15,7 +15,7 @@ const TareasCrear = () => {
     const { idproyecto } = useParams();
     let arr = idproyecto.split('@');
     const nombreProyecto = arr[1];
-    const tituloPagina = `Creación de Tareas: ${nombreProyecto}`;
+    const tituloPagina = `Creación de Especialidades: ${nombreProyecto}`;
 
     const [tareas, setTareas] = useState({
         nombre: ''
@@ -46,7 +46,7 @@ const TareasCrear = () => {
         const idTarea = response.tarea._id;
 
         if (idTarea === '') {
-            const mensaje = "La tarea no fue creada correctamente.";
+            const mensaje = "La especialidad no pudo ser creada correctamente.";
             swal({
                 title: 'Error',
                 text: mensaje,
@@ -62,7 +62,7 @@ const TareasCrear = () => {
                 }
             });
         } else {
-            const mensaje = "La tarea fue creada correctamente.";
+            const mensaje = "La especialidad fue creada correctamente.";
             navigate(`/tareas-admin/${idproyecto}`);
             swal({
                 title: 'Información',
@@ -97,7 +97,7 @@ const TareasCrear = () => {
 
                 <ContentHeader
                     Titulo={tituloPagina}
-                    breadCrumb1={"Listado de Tareas"}
+                    breadCrumb1={"Listado de Especialidades"}
                     breadCrumb2={"Creación"}
                     ruta1={`/tareas-admin/${idproyecto}`}
                 />
@@ -124,7 +124,7 @@ const TareasCrear = () => {
                                             className="form-control"
                                             id="nombre"
                                             name="nombre"
-                                            placeholder="Nombre Tarea"
+                                            placeholder="Nombre Especialidad"
                                             value={nombre}
                                             onChange={onChange}
                                             required

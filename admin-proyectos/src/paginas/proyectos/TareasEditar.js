@@ -17,7 +17,7 @@ const TareasEditar = () => {
     const nombreTarea = arr[1];
     const idProyecto = arr[2];
     const nombreProyecto = arr[3];
-    const tituloPagina = `Edición de Tareas: ${nombreProyecto}`;
+    const tituloPagina = `Edición de Especialidades: ${nombreProyecto}`;
 
     const [tareas, setTareas] = useState({
         nombre: nombreTarea
@@ -52,7 +52,7 @@ const TareasEditar = () => {
         const idTareaEditado = response.tarea._id;
 
         if (idTareaEditado !== idTarea) {
-            const mensaje = "La tarea no fue editada correctamente.";
+            const mensaje = "La especialidad no fue editada correctamente.";
             swal({
                 title: 'Error',
                 text: mensaje,
@@ -68,7 +68,7 @@ const TareasEditar = () => {
                 }
             });
         } else {
-            const mensaje = "La tarea fue editada correctamente.";
+            const mensaje = "La especialidad fue editada correctamente.";
             navigate(`/tareas-admin/${idProyecto}@${nombreProyecto}`);
             swal({
                 title: 'Información',
@@ -102,7 +102,7 @@ const TareasEditar = () => {
 
                 <ContentHeader
                     Titulo={tituloPagina}
-                    breadCrumb1={"Listado de Tareas"}
+                    breadCrumb1={"Listado de Especialidades"}
                     breadCrumb2={"Edición"}
                     ruta1={`/tareas-admin/${idProyecto}@${nombreProyecto}`}
                 />

@@ -13,7 +13,7 @@ const TareasAdmin = () => {
     const { idproyecto } = useParams();
     let arr = idproyecto.split('@');
     const nombreProyecto = arr[1];
-    const tituloPagina = `Listado de Tareas: ${nombreProyecto}`;
+    const tituloPagina = `Listado de Especialidades: ${nombreProyecto}`;
 
     const [tareas, setTareas] = useState([]);
 
@@ -32,8 +32,8 @@ const TareasAdmin = () => {
         e.preventDefault();
         const response = await APIInvoke.invokeDELETE(`/api/tareas/${idTarea}?proyecto=${idProyecto}`);
 
-        if (response.msg === 'Tarea eliminada') {
-            const mensaje = 'La tarea fue eliminada correctamente.';
+        if (response.msg === 'Especialidad eliminada') {
+            const mensaje = 'La Especialidad fue eliminada correctamente.';
             swal({
                 title: 'Información',
                 text: mensaje,
@@ -50,7 +50,7 @@ const TareasAdmin = () => {
             });
             cargarTareas();
         } else {
-            const mensaje = 'La tarea no se pudo eliminar.';
+            const mensaje = 'La Especialidad no se pudo eliminar.';
             swal({
                 title: 'Error',
                 text: mensaje,
@@ -78,15 +78,15 @@ const TareasAdmin = () => {
 
                 <ContentHeader
                     Titulo={tituloPagina}
-                    breadCrumb1={"Listado de Proyectos"}
-                    breadCrumb2={"Tareas"}
+                    breadCrumb1={"Listado de Citas Agendadas"}
+                    breadCrumb2={"Especialidades"}
                     ruta1={"/proyectos-admin"}
                 />
 
                 <section className="content">
                     <div className="card">
                         <div className="card-header">
-                            <h3 className="card-title"><Link to={`/tareas-crear/${idproyecto}`} type="button" className="btn btn-block btn-primary btn-sm">Crear Tarea</Link></h3>
+                            <h3 className="card-title"><Link to={`/tareas-crear/${idproyecto}`} type="button" className="btn btn-block btn-primary btn-sm">Crear Especialidad</Link></h3>
                             <div className="card-tools">
                                 <button type="button" className="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i className="fas fa-minus" />

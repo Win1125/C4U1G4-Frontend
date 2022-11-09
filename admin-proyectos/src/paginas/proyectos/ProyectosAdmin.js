@@ -24,8 +24,8 @@ const ProyectosAdmin = () => {
         e.preventDefault();
         const response = await APIInvoke.invokeDELETE(`/api/proyectos/${idProyecto}`);
 
-        if (response.msg === 'Proyecto eliminado') {
-            const mensaje = 'El proyecto fue eliminado correctamente.';
+        if (response.msg === 'Cita eliminada') {
+            const mensaje = 'La cita fue eliminada correctamente.';
             swal({
                 title: 'Información',
                 text: mensaje,
@@ -42,7 +42,7 @@ const ProyectosAdmin = () => {
             });
             cargarProyectos();
         } else {
-            const mensaje = 'El proyecto no se pudo eliminar.';
+            const mensaje = 'La cita no se pudo eliminar.';
             swal({
                 title: 'Error',
                 text: mensaje,
@@ -68,16 +68,16 @@ const ProyectosAdmin = () => {
             <div className="content-wrapper">
 
                 <ContentHeader
-                    Titulo={"Listado de Proyectos"}
+                    Titulo={"Listado de Citas Programadas"}
                     breadCrumb1={"Inicio"}
-                    breadCrumb2={"Proyectos"}
+                    breadCrumb2={"Citas"}
                     ruta1={"/home"}
                 />
 
                 <section className="content">
                     <div className="card">
                         <div className="card-header">
-                            <h3 className="card-title"><Link to={"/proyectos-crear"} type="button" className="btn btn-block btn-primary btn-sm">Crear Proyecto</Link></h3>
+                            <h3 className="card-title"><Link to={"/proyectos-crear"} type="button" className="btn btn-block btn-primary btn-sm">Crear Nueva Cita</Link></h3>
                             <div className="card-tools">
                                 <button type="button" className="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i className="fas fa-minus" />
@@ -105,7 +105,7 @@ const ProyectosAdmin = () => {
                                                     <td>{item._id}</td>
                                                     <td>{item.nombre}</td>
                                                     <td>
-                                                        <Link to={`/tareas-admin/${item._id}@${item.nombre}`} className="btn btn-sm btn-info">Tareas</Link>&nbsp;&nbsp;
+                                                        <Link to={`/tareas-admin/${item._id}@${item.nombre}`} className="btn btn-sm btn-info">Especialidad</Link>&nbsp;&nbsp;
                                                         <Link to={`/proyectos-editar/${item._id}@${item.nombre}`} className="btn btn-sm btn-primary">Editar</Link>&nbsp;&nbsp;
                                                         <button onClick={(e) => eliminarProyecto(e, item._id)} className="btn btn-sm btn-danger">Eliminar</button>
                                                     </td>

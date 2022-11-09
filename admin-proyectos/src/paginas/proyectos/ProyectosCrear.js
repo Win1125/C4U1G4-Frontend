@@ -38,7 +38,7 @@ const ProyectosCrear = () => {
         const idProyecto = response._id;
 
         if (idProyecto === '') {
-            const mensaje = "El proyecto no fue creado correctamente.";
+            const mensaje = "La Cita no fue creada correctamente.";
             swal({
                 title: 'Error',
                 text: mensaje,
@@ -54,7 +54,7 @@ const ProyectosCrear = () => {
                 }
             });
         } else {
-            const mensaje = "El proyecto fue creado correctamente.";
+            const mensaje = "La Cita fue creado correctamente.";
             navigate("/proyectos-admin");
             swal({
                 title: 'Información',
@@ -91,8 +91,8 @@ const ProyectosCrear = () => {
             <div className="content-wrapper">
 
                 <ContentHeader
-                    Titulo={"Creación de Proyectos"}
-                    breadCrumb1={"Listado de Proyectos"}
+                    Titulo={"Creación de Citas"}
+                    breadCrumb1={"Listado de Citas"}
                     breadCrumb2={"Creación"}
                     ruta1={"/proyectos-admin"}
                 />
@@ -119,7 +119,7 @@ const ProyectosCrear = () => {
                                             className="form-control"
                                             id="nombre"
                                             name="nombre"
-                                            placeholder="Nombre Proyecto"
+                                            placeholder="Nombre Cita"
                                             value={nombre}
                                             onChange={onChange}
                                             required
