@@ -1,5 +1,5 @@
 module.exports = {
     api: {
-        baseURL: "http://localhost:4000"
+        baseURL: "https://servidorc4u1g4.herokuapp.com/"
     }
 }

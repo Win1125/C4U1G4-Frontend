@@ -14,8 +14,12 @@
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": "16.17.1"
+  },    
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node src/index.js",
+    "heroku-postbuild": "cd src && npm install && npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
