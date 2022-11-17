@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../componentes/Menu";
 import { Link } from 'react-router-dom';
-import Logo from '../../node_modules/admin-lte/dist/img/TDOcolor.png';
+import Logo from '../../node_modules/admin-lte/dist/img/logo.png';
 
 const SidebarContainer = () => {
     return (
